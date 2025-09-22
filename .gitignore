@@ -18,10 +18,6 @@ __pycache__/
 *.log
 *.tmp
 
-# Datos grandes (opcional si NO quieres subirlos)
-# data/*
-# !data/conjunto_de_datos_tmodulo_enape_2021_cleaned.csv
-
 # Modelos/artefactos pesados
 *.pickle
 *.joblib

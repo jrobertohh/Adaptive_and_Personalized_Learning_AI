@@ -1,0 +1,53 @@
+# ============================
+# Núcleo de datos y cómputo
+# ============================
+numpy==2.0.0            # Algebra básica y arrays; base de casi todo el análisis
+pandas==2.2.2           # Carga/limpieza/transformación de datos; conteos por estado; corr()
+scipy==1.13.1           # Rutinas numéricas/estadísticas usadas por factor_analyzer y otros
+
+# ============================
+# Visualización
+# ============================
+matplotlib==3.9.0       # Gráficos (barras, pie, varianza explicada)
+seaborn==0.13.2         # Heatmap de matriz de correlación y estética
+pillow==10.3.0          # Backend de imágenes para matplotlib
+
+# Deps de matplotlib/plots (internas pero fijadas por reproducibilidad)
+contourpy==1.2.1        # Contornos en plots
+cycler==0.12.1          # Ciclos de estilos de línea/color
+fonttools==4.53.0       # Manejo de fuentes
+kiwisolver==1.4.5       # Layout del sistema de figuras
+pyparsing==3.1.2        # Parsing de expresiones (usado por matplotlib)
+packaging==24.1         # Manejo de versiones/paquetes
+
+# ============================
+# Análisis factorial y estadística
+# ============================
+factor_analyzer==0.5.1  # Análisis factorial exploratorio (FA), varimax, varianza explicada
+statsmodels==0.14.2     # Soporte estadístico adicional (si se requiere)
+scikit-learn==1.5.0     # Utilidades de *preprocessing*/validación (opcional en el flujo)
+patsy==0.5.6            # Fórmulas estadísticas (interoperabilidad con statsmodels)
+numdifftools==0.9.41    # Derivadas numéricas (dep indirecta de algunos métodos)
+sympy==1.12.1           # Simbólico (apoyo en cálculos/expresiones si se usan)
+mpmath==1.3.0           # Aritmética multiprecisión (dep de sympy)
+joblib==1.4.2           # Paralelización/cache en sklearn
+threadpoolctl==3.5.0    # Control de *threads* para BLAS en sklearn
+
+# ============================
+# SEM y graficación tipo AMOS
+# ============================
+semopy==2.3.11          # Modelado de ecuaciones estructurales en Python (alternativa a AMOS)
+networkx==3.3           # Estructuras de grafos (soporte para diagramas)
+graphviz==0.20.3        # Render de diagrama del modelo SEM/AMOS (requiere binario `dot` del SO)
+
+# ============================
+# Fechas/zonas horarias
+# ============================
+python-dateutil==2.9.0.post0  # Manejo de fechas (dep de pandas/matplotlib)
+pytz==2024.1                  # Zonas horarias (históricamente usado por pandas)
+tzdata==2024.1                # Datos de zonas horarias (entornos sin sistema tz)
+
+# ============================
+# Compatibilidad
+# ============================
+six==1.16.0              # Compatibilidad Py2/3 (arrastra algunas libs)

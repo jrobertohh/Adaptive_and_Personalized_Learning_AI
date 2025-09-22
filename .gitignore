@@ -1,0 +1,39 @@
+cat > .gitignore << 'EOF'
+# macOS
+.DS_Store
+
+# Entorno virtual
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.pyo
+.ipynb_checkpoints/
+
+# Logs y temporales
+*.log
+*.tmp
+
+# Datos grandes (opcional si NO quieres subirlos)
+# data/*
+# !data/conjunto_de_datos_tmodulo_enape_2021_cleaned.csv
+
+# Modelos/artefactos pesados
+*.pickle
+*.joblib
+
+# IDE
+.vscode/
+.idea/
+EOF
+
+# data
+*.csv
+*.xlsx
+*.xls
+*.zip
+*.pdf

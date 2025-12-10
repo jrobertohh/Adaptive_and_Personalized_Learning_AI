@@ -117,6 +117,26 @@ print("=" * 40)
 # Mostrar solo cargas relevantes para facilitar lectura
 print(loadings[loadings.abs() > 0.4].fillna(''))
 
+
+# ==========================================
+# 4.1. TABLA COMPLETA DE CARGAS FACTORIALES
+# ==========================================
+
+# Opcional: mostrar todas las filas en la consola
+pd.set_option('display.max_rows', None)
+
+print("\n" + "=" * 40)
+print("CARGAS FACTORIALES COMPLETAS (TODAS LAS VARIABLES)")
+print("=" * 40)
+print(loadings.round(3))  # redondeado a 3 decimales para lectura
+
+# Opcional: exportar a CSV para usarla en Excel / LaTeX
+output_loadings_path = os.path.join('data', 'cargas_factoriales_completas.csv')
+loadings.to_csv(output_loadings_path, index_label='Variable')
+print(f"\n--> Archivo con todas las cargas guardado en: {output_loadings_path}")
+
+
+
 # ==========================================
 # 5. GENERACIÓN DE GRÁFICO (GRAPHVIZ)
 # ==========================================
